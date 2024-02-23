@@ -1,0 +1,13 @@
+services:
+  mocap:
+    image: mocap:dev
+    build:
+      dockerfile: Dockerfile
+    entrypoint: echo 3
+    environment:
+      DISPLAY: $DISPLAY  # For vis
+    devices:
+      - /dev/video0:/dev/video0
+    volumes:
+      - ./config:/config
+      - /tmp/.X11-unix:/tmp/.X11-unix  # For vis
