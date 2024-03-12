@@ -1,5 +1,10 @@
 .cache
 .vscode
+
 build
 movenet*/
+blazepose
+vcpkg
+venv
+
 misc.sh
